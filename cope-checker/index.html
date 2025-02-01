@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cope Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cope Checker</h1>
+
+    <div>
+        <h2>Courses</h2>
+        <input type="text" id="courseName" placeholder="Enter course name">
+        <button onclick="addCourse()">Add Course</button>
+        <select id="courseList" onchange="updateCategories()"></select>
+        <button onclick="removeCourse()">Remove Course</button>
+    </div>
+
+    <div>
+        <h2>Categories</h2>
+        <input type="text" id="categoryName" placeholder="Category name">
+        <input type="number" id="categoryWeight" placeholder="Weight (0-1)" step="0.01">
+        <input type="number" id="dropLowestN" placeholder="Drop lowest N" min="0">
+        <button onclick="addCategory()">Add Category</button>
+        <select id="categoryList"></select>
+        <button onclick="removeCategory()">Remove Category</button>
+    </div>
+
+    <div>
+        <h2>Assignments</h2>
+        <input type="text" id="assignmentName" placeholder="Assignment name">
+        <input type="number" id="assignmentScore" placeholder="Score">
+        <button onclick="addAssignment()">Add Assignment</button>
+        <button onclick="removeAssignment()">Remove Assignment</button>
+    </div>
+
+    <div>
+        <h2>Final Grade</h2>
+        <button onclick="calculateFinalGrade()">Calculate Grade</button>
+        <p id="finalGrade">Final grade: N/A</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
